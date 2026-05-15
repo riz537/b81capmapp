@@ -1,0 +1,50 @@
+### metadata url
+GET http://localhost:4004/odata/v4/products-mgmt/$metadata
+
+### query operation
+
+GET http://localhost:4004/odata/v4/products-mgmt/Products
+
+### read operation 
+
+GET http://localhost:4004/odata/v4/products-mgmt/Products('101')
+
+### Create operation 
+
+POST http://localhost:4004/odata/v4/products-mgmt/Products
+Content-Type: application/json
+
+{
+
+  "name": "Iphone 17pro",
+  "description": "Iphone 17pro 256gb A19chip",
+  "price": 150000,
+  "discount": 5,
+  "stock": 20
+}
+
+### update operation
+
+PUT http://localhost:4004/odata/v4/products-mgmt/Products('901')
+Content-Type: application/json
+
+{
+  "ID": "901",
+  "name": "Iphone 17",
+  "description": "Iphone 17 256gb A19chip",
+  "price": 79000,
+  "discount": 0,
+  "stock": 20
+}
+
+### patch operation
+PATCH http://localhost:4004/odata/v4/products-mgmt/Products('901')
+Content-Type: application/json
+
+{
+  "stock": 10
+}
+
+### delete Operation 
+
+DELETE http://localhost:4004/odata/v4/products-mgmt/Products('101')

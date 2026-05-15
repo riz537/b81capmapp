@@ -1,0 +1,6 @@
+ID,customerName,customerMobile,storeName,netPrice,createdAt,createdBy,modifiedAt,modifiedBy
+77339619-4553-4af3-8750-68246477cb7f,vishwa,7788877888,INORBIT,1506742.75,2020-02-24T00:00:00.000Z,createdBy.4lrk9@example.com,2015-06-08T00:00:00.000Z,modifiedBy.4lrk9@example.com
+7733962b-fdae-4651-a9eb-d1f2f5a9a81b,Veer,7788877844,GACHIBOWLI,9791451.03,2003-04-28T00:00:00.000Z,createdBy.4lrka@example.org,2013-09-13T00:00:00.000Z,modifiedBy.4lrka@example.com
+7733963f-fe82-4238-8ce0-7ee94603fab0,Ajay,7788347888,KPHB,4875600.09,2008-06-29T00:00:00.000Z,createdBy.4lrkb@example.com,2001-06-19T00:00:00.000Z,modifiedBy.4lrkb@example.net
+77339641-cdbe-478f-a734-cc11fdfa8bb4,Rizwan,7782217888,INORBIT,2169315.57,2008-09-06T00:00:00.000Z,createdBy.4lrkc@example.net,2002-04-26T00:00:00.000Z,modifiedBy.4lrkc@example.org
+77339656-69b7-4730-a7df-99cfad18e9de,Shwetha,7768877888,GACHIBOWLI,6390145.27,2000-04-07T00:00:00.000Z,createdBy.4lrkd@example.org,2019-06-27T00:00:00.000Z,modifiedBy.4lrkd@example.com
