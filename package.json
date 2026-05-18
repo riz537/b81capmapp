@@ -2,6 +2,7 @@
   "name": "b81capmapp",
   "version": "1.0.0",
   "dependencies": {
+    "@cap-js/hana": "^2.8.0",
     "@sap/cds": "^9"
   },
   "devDependencies": {
@@ -11,13 +12,15 @@
   "scripts": {
     "start": "cds-serve",
     "watch-prdmgmtfreestyleui": "cds watch --open com.demo.prdmgmtfreestyleui/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-prdmgmtui": "cds watch --open com.demo.prdmgmtui/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-prdmgmtui": "cds watch --open com.demo.prdmgmtui/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-ordermgmtui": "cds watch --open com.demo.ordermgmtui/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "workspaces": [
     "app/*"
   ],
   "sapux": [
-    "app/prdmgmtui"
+    "app/prdmgmtui",
+    "app/ordermgmtui"
   ]
 }
