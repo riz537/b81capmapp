@@ -8,7 +8,7 @@ entity Products:cuid,managed{
     name: String(50) @mandatory;
     description: String(100) ;
     price: Decimal(9,2) @mandatory;
-    discount: Integer @mandatory @assert.format : '^(70|[1-6]?[0-9])$';
+    discount: Integer ;
     stock: Integer @mandatory;
     image: LargeBinary @Core.MediaType: 'image/jpeg';
 }
@@ -24,7 +24,7 @@ entity OrderItems:cuid{
     order: Association to Orders;
     product: Association to Products;
     quantity: Integer;
-    untiPrice: Decimal(9,2);
+    unitPrice: Decimal(9,2);
     discount: Integer;
     totalPrice: Decimal(9,2);
 }

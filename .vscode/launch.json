@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug CAP Hybrid",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "cds",
+      "runtimeArgs": [
+        "watch",
+        "--profile",
+        "hybrid"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "restart": true,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}

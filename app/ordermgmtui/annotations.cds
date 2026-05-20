@@ -113,7 +113,22 @@ annotate service.Orders with @(UI.SelectionFields: [
     },);
 
 annotate service.Orders with {
-    ID           @Common.Label: 'Order ID';
+    ID           @(
+        Common.Label: 'Order ID',
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'Orders',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : ID,
+                    ValueListProperty : 'ID',
+                },
+            ],
+            Label : 'Select Order ID',
+        },
+        Common.ValueListWithFixedValues : false,
+    );
     storeName    @Common.Label: 'Store Name';
     customerName @Common.Label: 'Customer Name';
     customerMobile @Common.Label: 'Customer Mobile';
@@ -143,7 +158,7 @@ annotate service.OrderItems with @(
         },
         {
             $Type : 'UI.DataField',
-            Value : untiPrice,
+            Value : unitPrice,
             Label : 'Unit Price',
         },
         {
@@ -158,4 +173,35 @@ annotate service.OrderItems with @(
         },
     ]
 );
+
+annotate service.OrderItems with {
+    product @(
+        Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'Products',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : product_ID,
+                    ValueListProperty : 'ID',
+                },
+                {
+                    $Type : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty : 'name',
+                },
+                {
+                    $Type : 'Common.ValueListParameterOut',
+                    ValueListProperty : 'price',
+                    LocalDataProperty : unitPrice,
+                },
+                {
+                    $Type : 'Common.ValueListParameterOut',
+                    ValueListProperty : 'discount',
+                    LocalDataProperty : discount,
+                },
+            ],
+            Label : 'Select Product',
+        },
+        Common.ValueListWithFixedValues : false,
+)};
 
